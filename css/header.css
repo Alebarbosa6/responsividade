@@ -1,0 +1,109 @@
+.cabecalho__menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.container__imagem{
+    padding: 1em;
+    
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--branco);
+    width: 60vw;  
+}
+.container__botao:checked~ .lista-menu{
+    display: block;
+}
+.lista-menu__titulo{
+    color: var(--amarelo);
+}
+.lista-menu__item{
+    color: var(--roxo);
+}
+
+body {
+    max-width: 300px;
+    width: auto;
+    margin: 4% auto;
+}
+
+.calculadora {
+    padding: 20px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+}
+
+h1 {
+    font-size: 20px;
+    font-family: "Helvetica";
+    color: #6d6d6d;
+    margin: 0px 0 10px 0;
+}
+
+#visor {
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    height: 60px;
+    text-align: right;
+    font-size: 32px;
+    width: auto;
+}
+
+#visor:hover {
+    border: 1px solid #bbb;
+    box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.calculadora input {
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    width: 52px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.calculadora input.resultado {
+    border: 1px solid #3079ED;
+    background-color: #4d90fe;
+}
+
+.calculadora input.resultado:hover {
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #1857BB;
+    background-color: #307CF9;
+}
+
+.calculadora input.operador {
+    border: 1px solid #bbb;
+    background-color: #ddd;
+}
+
+.calculadora input.operador:hover {
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #aaa;
+    background-color: #ddd;
+}
